@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:graduation_project/utilities/routes.dart';
 
 import 'color.dart';
 import 'controller/onboarding_controller.dart';
@@ -18,6 +19,7 @@ class CustomButtonOnBoarding extends GetView<OnBoardingControllerImplement> {
           textColor: Colors.white,
           onPressed: () {
             controller.next() ;
+            // Navigator.of(context).pushNamed(AppRoutes.loginPageRoute);
           },
           color: AppColor.primaryColor,
           child: const Text("Continue")),

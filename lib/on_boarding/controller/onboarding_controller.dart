@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:graduation_project/utilities/routes.dart';
 
 import '../datsource/static.dart';
 
@@ -19,8 +20,9 @@ class OnBoardingControllerImplement extends OnBoardingController {
     currentPage++;
 
   if(currentPage>onBoardingList.length-1){
+print('last page');
+Get.toNamed(AppRoutes.loginPageRoute);
 
-// Get.offAllNamed(AppRoutes.login);
   }else{  pageController.animateToPage(currentPage,
       duration: const Duration(microseconds: 400), curve: Curves.easeIn);
   }

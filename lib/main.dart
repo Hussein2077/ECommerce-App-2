@@ -1,25 +1,59 @@
 import 'package:flutter/material.dart';
-import 'package:graduation_project/on_boarding/on_boarding.dart';
-
-
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:graduation_project/utilities/router.dart';
+import 'package:graduation_project/utilities/routes.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Ecommerce App',
       theme: ThemeData(
-
-        primarySwatch: Colors.blue,
-      ),
-      home:const OnBoarding(),
+          scaffoldBackgroundColor: const Color(0xFFE5E5E5),
+          primaryColor: Colors.red,
+          inputDecorationTheme: InputDecorationTheme(
+            labelStyle: Theme.of(context).textTheme.subtitle1,
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              borderSide: const BorderSide(
+                color: Colors.grey,
+              ),
+            ),
+            disabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              borderSide: const BorderSide(
+                color: Colors.grey,
+              ),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              borderSide: const BorderSide(
+                color: Colors.grey,
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              borderSide: const BorderSide(
+                color: Colors.red,
+              ),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(2.0),
+              borderSide: const BorderSide(
+                color: Colors.red,
+              ),
+            ),
+          )),
+      onGenerateRoute: onGenerate,
+      initialRoute: AppRoutes.onBoardingRoute,
     );
   }
 }
