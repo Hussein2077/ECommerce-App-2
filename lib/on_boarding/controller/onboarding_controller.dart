@@ -20,8 +20,8 @@ class OnBoardingControllerImplement extends OnBoardingController {
     currentPage++;
 
   if(currentPage>onBoardingList.length-1){
-print('last page');
-Get.toNamed(AppRoutes.loginPageRoute);
+
+Get.toNamed(AppRoutes.landingPageRoute);
 
   }else{  pageController.animateToPage(currentPage,
       duration: const Duration(microseconds: 400), curve: Curves.easeIn);
