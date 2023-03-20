@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:graduation_project/controllers/database_controller.dart';
 import 'package:graduation_project/models/product.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:graduation_project/utilities/assets.dart';
 import 'package:graduation_project/utilities/routes.dart';
 import 'package:provider/provider.dart';
 

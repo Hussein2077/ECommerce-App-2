@@ -47,10 +47,10 @@ class FirestoreServices {
       final result = snapshot.docs
           .map(
             (snapshot) => builder(
-          snapshot.data() as Map<String, dynamic>,
-          snapshot.id,
-        ),
-      )
+              snapshot.data() as Map<String, dynamic>,
+              snapshot.id,
+            ),
+          )
           .where((value) => value != null)
           .toList();
       if (sort != null) {

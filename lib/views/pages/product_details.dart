@@ -138,14 +138,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Text(
                         widget.product.title,
                         style: Theme.of(context).textTheme.headline5!.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
+                              fontWeight: FontWeight.w600,
+                            ),
                       ),
                       Text(
                         '\$${widget.product.price}',
                         style: Theme.of(context).textTheme.headline5!.copyWith(
-                          fontWeight: FontWeight.w600,
-                        ),
+                              fontWeight: FontWeight.w600,
+                            ),
                       ),
                     ],
                   ),
@@ -153,8 +153,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                   Text(
                     widget.product.category,
                     style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                      color: Colors.black54,
-                    ),
+                          color: Colors.black54,
+                        ),
                   ),
                   const SizedBox(height: 16.0),
                   Text(

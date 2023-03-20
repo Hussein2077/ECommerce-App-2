@@ -5,6 +5,7 @@ import 'package:graduation_project/utilities/enums.dart';
 import 'package:graduation_project/views/widgets/main_button.dart';
 import 'package:graduation_project/views/widgets/main_dialog.dart';
 import 'package:graduation_project/views/widgets/social_media_button.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
 class AuthPage extends StatefulWidget {
@@ -33,7 +34,7 @@ class _AuthPageState extends State<AuthPage> {
       await model.submit();
       if (!mounted) return;
     } catch (e) {
-      MainDialog(context: context, title: 'Error', content: e.toString())
+      MainDialog(context: context, title: 'Error Authentication', content: e.toString())
           .showAlertDialog();
     }
   }
